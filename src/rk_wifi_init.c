@@ -82,6 +82,7 @@ static wifi_device supported_wifi_devices[] = {
 	{"AP6255",      "02d0:a9bf"},
 	{"AP6212A",     "02d0:a9a6"},
 	{"RTL8822BE",	"10ec:b822"},
+        {"RTL8822CE",	"10ec:c822"},
 };
 
 // TODO: use new ANDROID_SOCKET mechanism, once support for multiple
@@ -100,6 +101,7 @@ static wifi_device supported_wifi_devices[] = {
 #define RTL8192DU_DRIVER_MODULE_PATH "/system/lib/modules/8192du.ko"
 #define RTL8812AU_DRIVER_MODULE_PATH "/system/lib/modules/8812au.ko"
 #define RTL8822BE_DRIVER_MODULE_PATH "/system/lib/modules/8822be.ko"
+#define RTL8822CE_DRIVER_MODULE_PATH "/system/lib/modules/8822ce.ko"
 #define BCM_DRIVER_MODULE_PATH       "/system/lib/modules/bcmdhd.ko"
 #define DRIVER_MODULE_PATH_UNKNOW    ""
 
@@ -142,6 +144,7 @@ wifi_ko_file_name module_list[] =
 	{"RTL8812AU", RTL8812AU_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, ""},
 	{"RTL8189FS", RTL8189FS_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, ""},
 	{"RTL8822BE", RTL8822BE_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, ""},
+        {"RTL8822CE", RTL8822CE_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, ""},
 	{"AP6335",          BCM_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, AP6335_BT_FIRMWARE_MODULE_PATH},
 	{"AP6330",          BCM_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, AP6330_BT_FIRMWARE_MODULE_PATH},
 	{"AP6354",          BCM_DRIVER_MODULE_PATH, UNKKOWN_DRIVER_MODULE_ARG, AP6354_BT_FIRMWARE_MODULE_PATH},
