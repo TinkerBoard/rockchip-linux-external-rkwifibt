@@ -65,6 +65,7 @@ static wifi_device supported_wifi_devices[] = {
 	{"RTL8188EU",	"0bda:0179"},
 	{"RTL8723BU",	"0bda:b720"},
 	{"RTL8723BS",	"024c:b723"},
+	{"RTL8723BS",   "024c:0626"},
 	{"RTL8822BS",	"024c:b822"},
 	{"RTL8723CS",	"024c:b703"},
 	{"RTL8723DS",	"024c:d723"},
@@ -279,8 +280,8 @@ int check_wifi_chip_type_string(char *type)
 		else if (get_wifi_device_id(PCIE_DIR, PREFIX_PCIE) == 0)
 			printf("PCIE WIFI identify sucess \n");
 		else {
-			printf("maybe there is no usb wifi or sdio or pcie wifi, set default wifi module Brocom APXXX \n");
-			strcpy(recoginze_wifi_chip, "APXXX");
+			printf("maybe there is no usb wifi or sdio or pcie wifi, set default wifi module RTL8723BS for tinker board \n");
+			strcpy(recoginze_wifi_chip, "RTL8723BS");
 			identify_sucess = 1 ;
 		}
 	}
